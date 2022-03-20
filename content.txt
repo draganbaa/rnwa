@@ -1,9 +1,0 @@
-<main>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
-        inventore. Dolorem perspiciatis distinctio vel possimus esse rem
-        delectus! Vitae dolorem quisquam molestias architecto ut voluptatibus
-        neque enim totam est cum!
-</main>
-      
-      
-    <footer>FSRE 2022. &copy; Andro Raspudić Dragan Drljepan</footer>
