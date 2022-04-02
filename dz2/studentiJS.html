@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../dz1/style.css" />
@@ -36,19 +35,12 @@
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-addon">Search</span>
-                <input type="text" name="search_text" id="search_text" placeholder="Pretaži studente" class="form-control" />
+                <input type="text" onkeyup="showHint(this.value)" />
               </div>
             </div>
+
             <br />
-            <div id="result"></div>
-            <!-- <div class="item">
-              <p>Andro Raspudic</p>
-              <button class="crud" type="button">Info</button>
-            </div>
-            <div class="item">
-              <p>Dragan Drljepan</p>
-              <button class="crud" type="button">Info</button>
-            </div> -->
+            <span id="txtHint" style="color: white"></span>
           </div>
         </article>
       </main>
@@ -57,7 +49,6 @@
         <p>FSRE 2022. &copy; Andro Raspudić Dragan Drljepan</p>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <script src="../dz2/script.js"></script>
   </body>

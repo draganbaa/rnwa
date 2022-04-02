@@ -1,27 +1,18 @@
-$(document).ready(function(){
-    load_data();
-    function load_data(query)
-    {
-      $.ajax({
-        url:"fetch.php",
-        method:"post",
-        data:{query:query},
-        success:function(data)
-        {
-          $('#result').html(data);
-        }
-      });
-    }
-    
-    $('#search_text').keyup(function(){
-      var search = $(this).val();
-      if(search != '')
-      {
-        load_data(search);
+const search_text = document.querySelector("#search_text");
+
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
       }
-      else
-      {
-        load_data();			
-      }
-    });
-  });
+    };
+    xmlhttp.open("GET", "student_search.php?s=" + str, true);
+    xmlhttp.send();
+  }
+}
+showHint(search_text);
