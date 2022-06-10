@@ -1,0 +1,53 @@
+﻿@model MVCCollegeDB.Models.marks
+
+@{
+    ViewBag.Title = "Details";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>College Database</title>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Details</h2>
+
+        <div>
+            <h4>marks</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.students.first_name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.students.first_name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.subjects.name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.subjects.name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.marks1)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.marks1)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+</body>
+</html>
